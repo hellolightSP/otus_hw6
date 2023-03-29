@@ -7,8 +7,7 @@ sudo sed -i -e "s|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.
 #install required packages
 yum install -y redhat-lsb-core wget rpmdevtools rpm-build createrepo yum-utils gcc
 
-#install nginx and catalog tree (В теории после скачивания данного пакета и его установки у нас должны создаться и наполниться каталоги /rpmbuild/*, в SOURCES копируется tar.gz архив с nginx)
-#? проверить BUILD SOURCES (должны создаться)
+#download nginx src
 cd /root/
 wget https://nginx.org/packages/centos/8/SRPMS/nginx-1.20.2-1.el8.ngx.src.rpm
 rpm -i nginx-1.*
